@@ -6,7 +6,7 @@ Bounty Meter is a command-line utility tool designed for bug bounty hunters to d
 
 ### Prerequisites
 
-Bounty Meter is built using Bash scripting language and requires the following tools to be installed on your system:
+Bounty Meter PY is built using Python scripting language and requires the following tools to be installed on your system:
 
 - Python3
 - progress
