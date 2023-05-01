@@ -1,3 +1,5 @@
+![bmbanner](https://user-images.githubusercontent.com/63975446/232277969-c4fd1424-55ac-4005-8856-18ccbe57ba90.png)
+
 # Bounty Meter PY
 
 Bounty Meter is a command-line utility tool designed for bug bounty hunters to define their bounty target for a year, maintain and keep record of their bounties on a monthly basis, and track their progress throughout the year. With Bounty Meter, you can add and subtract bounties, view your total bounties earned this year, and display an interactive stats card to visualize your progress.
@@ -6,16 +8,25 @@ Bounty Meter is a command-line utility tool designed for bug bounty hunters to d
 
 ### Prerequisites
 
+<<<<<<< HEAD
 Bounty Meter PY is built using Python scripting language and requires the following tools to be installed on your system:
+=======
+Bounty Meter is built using Python scripting language and requires the following tools to be installed on your system:
+>>>>>>> bfbda0e1a4f0100fe5b18163de1775d888ecdc18
 
 - Python3
-- progress
+- progress (pip install progress)
 
 ### Installation
 
 You can download and use the latest version of Bounty Meter by running the following command in your terminal:
 ```
 curl https://raw.githubusercontent.com/720922/bountymeter_py/bountymeter.py -o bm.py && chmod +x bm.py 
+```
+
+Using PyPi:
+```
+pip install bmpy
 ```
 
 ### Creating Alias
@@ -66,7 +77,9 @@ bm stats
 If you want to make the `bm stats` command your banner in the terminal, you can add the ```bm stats``` command to your `.bashrc` or `.zshrc` file.
 
 ## Screnshots
-
+![bmusage](https://user-images.githubusercontent.com/63975446/232277645-5c7f4d74-f1a5-4afc-b91d-1001108576db.png)
+![bmmonthly](https://user-images.githubusercontent.com/63975446/232277651-e35d6ed4-b555-49e0-a68c-766a15f450fa.png)
+![bmstatscard](https://user-images.githubusercontent.com/63975446/232277657-7d01f347-d39a-4406-9ad2-abba053c55b5.png)
 
 ## License
 
