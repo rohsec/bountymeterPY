@@ -175,35 +175,53 @@ def stats():
 #########################################################
 #                   Main Function                        #
 #########################################################
+# def main():
+#     if(len(sys.argv)>1):
+#         match sys.argv[1]:
+#             case "add":
+#                 if(len(sys.argv)> 3 and sys.argv[2]!="" and sys.argv[2].isalpha() and sys.argv[3].isnumeric()):
+#                     add(sys.argv[2],sys.argv[3])
+#                 else:
+#                     usage()
+#             case "sub":
+#                 if(len(sys.argv)> 3 and sys.argv[2]!="" and sys.argv[2].isalpha() and sys.argv[3].isnumeric()):
+#                     sub(sys.argv[2],sys.argv[3])
+#                 else:
+#                     usage() 
+#             case "init":
+#                 if(len(sys.argv)>3 and sys.argv[2]!="" and sys.argv[2].isalnum() and sys.argv[3].isnumeric()):
+#                     initt(sys.argv[2],sys.argv[3])
+#                 else:
+#                     usage() 
+#             case "total":
+#                 total()
+#             case "monthly":
+#                 if(len(sys.argv)> 2 and sys.argv[2]!="" and sys.argv[2].isalpha()):
+#                     monthly(sys.argv[2])
+#                 else:
+#                     usage()
+#             case "stats":
+#                 stats() 
+#             case default:
+#                 usage()
+#     else:
+#         usage()
+
+## The match case is only supported in python version 3.10 and above therefore moving to if else statement for now
+
 def main():
-    if(len(sys.argv)>1):
-        match sys.argv[1]:
-            case "add":
-                if(len(sys.argv)> 3 and sys.argv[2]!="" and sys.argv[2].isalpha() and sys.argv[3].isnumeric()):
-                    add(sys.argv[2],sys.argv[3])
-                else:
-                    usage()
-            case "sub":
-                if(len(sys.argv)> 3 and sys.argv[2]!="" and sys.argv[2].isalpha() and sys.argv[3].isnumeric()):
-                    sub(sys.argv[2],sys.argv[3])
-                else:
-                    usage() 
-            case "init":
-                if(len(sys.argv)>3 and sys.argv[2]!="" and sys.argv[2].isalnum() and sys.argv[3].isnumeric()):
-                    initt(sys.argv[2],sys.argv[3])
-                else:
-                    usage() 
-            case "total":
-                total()
-            case "monthly":
-                if(len(sys.argv)> 2 and sys.argv[2]!="" and sys.argv[2].isalpha()):
-                    monthly(sys.argv[2])
-                else:
-                    usage()
-            case "stats":
-                stats() 
-            case default:
-                usage()
+    if(len(sys.argv)> 3 and sys.argv[1]=="add" and sys.argv[2]!="" and sys.argv[2].isalpha() and sys.argv[3].isnumeric()):
+        add(sys.argv[2],sys.argv[3])
+    elif(len(sys.argv)> 3 and sys.argv[1]=="sub" and sys.argv[2]!="" and sys.argv[2].isalpha() and sys.argv[3].isnumeric()):
+        sub(sys.argv[2],sys.argv[3])
+    elif(len(sys.argv)>3 and sys.argv[1]=="init" and sys.argv[2]!="" and sys.argv[2].isalnum() and sys.argv[3].isnumeric()):
+        initt(sys.argv[2],sys.argv[3])
+    elif(len(sys.argv)>1 and sys.argv[1]!="" and sys.argv[1]=="total"):
+        total()
+    elif(len(sys.argv)> 2 and sys.argv[1]=="monthly" and sys.argv[2]!="" and sys.argv[2].isalpha()):
+        monthly(sys.argv[2])
+    elif(len(sys.argv)>1 and sys.argv[1]!="" and sys.argv[1]=="stats"):
+        stats() 
     else:
         usage()
 
@@ -211,5 +229,6 @@ def main():
 #########################################################
 #                   Script Start                        #
 #########################################################
-if __name__ == "__main__":
-    main()
+# Not needed as of now as we are moving to pypi
+# if __name__ == "__main__":
+#     main()
